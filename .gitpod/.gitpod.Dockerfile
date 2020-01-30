@@ -18,6 +18,8 @@ COPY .gitpod/client.cnf /etc/mysql/mysql.conf.d/client.cnf
 
 COPY .gitpod/mysql-bashrc-launch.sh /etc/mysql/mysql-bashrc-launch.sh
 
+RUN chmod +x /etc/mysql/mysql-bashrc-launch.sh
+
 USER gitpod
 
 RUN echo "/etc/mysql/mysql-bashrc-launch.sh" >> ~/.bashrc
